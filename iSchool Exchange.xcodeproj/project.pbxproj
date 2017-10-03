@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7048F6751F717A1C0014E87D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048F6741F717A1C0014E87D /* AppDelegate.swift */; };
-		7048F6771F717A1C0014E87D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048F6761F717A1C0014E87D /* ViewController.swift */; };
 		7048F67A1F717A1C0014E87D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7048F6781F717A1C0014E87D /* Main.storyboard */; };
 		7048F67D1F717A1C0014E87D /* iSchool_Exchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7048F67B1F717A1C0014E87D /* iSchool_Exchange.xcdatamodeld */; };
 		7048F67F1F717A1C0014E87D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7048F67E1F717A1C0014E87D /* Assets.xcassets */; };
 		7048F6821F717A1C0014E87D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7048F6801F717A1C0014E87D /* LaunchScreen.storyboard */; };
 		7048F68D1F717A1C0014E87D /* iSchool_ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048F68C1F717A1C0014E87D /* iSchool_ExchangeTests.swift */; };
 		7048F6981F717A1C0014E87D /* iSchool_ExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048F6971F717A1C0014E87D /* iSchool_ExchangeUITests.swift */; };
+		7048F6A61F7AB4D60014E87D /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048F6A51F7AB4D60014E87D /* RestaurantTableViewController.swift */; };
+		7048F6A81F7ABA510014E87D /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048F6A71F7ABA510014E87D /* RestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		7048F6711F717A1C0014E87D /* iSchool Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iSchool Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7048F6741F717A1C0014E87D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7048F6761F717A1C0014E87D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7048F6791F717A1C0014E87D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7048F67C1F717A1C0014E87D /* iSchool_Exchange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSchool_Exchange.xcdatamodel; sourceTree = "<group>"; };
 		7048F67E1F717A1C0014E87D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		7048F6931F717A1C0014E87D /* iSchool ExchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iSchool ExchangeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7048F6971F717A1C0014E87D /* iSchool_ExchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSchool_ExchangeUITests.swift; sourceTree = "<group>"; };
 		7048F6991F717A1C0014E87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7048F6A51F7AB4D60014E87D /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		7048F6A71F7ABA510014E87D /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				7048F6741F717A1C0014E87D /* AppDelegate.swift */,
-				7048F6761F717A1C0014E87D /* ViewController.swift */,
 				7048F6781F717A1C0014E87D /* Main.storyboard */,
+				7048F6A71F7ABA510014E87D /* RestaurantTableViewCell.swift */,
+				7048F6A51F7AB4D60014E87D /* RestaurantTableViewController.swift */,
 				7048F67E1F717A1C0014E87D /* Assets.xcassets */,
 				7048F6801F717A1C0014E87D /* LaunchScreen.storyboard */,
 				7048F6831F717A1C0014E87D /* Info.plist */,
@@ -262,8 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7048F6771F717A1C0014E87D /* ViewController.swift in Sources */,
+				7048F6A81F7ABA510014E87D /* RestaurantTableViewCell.swift in Sources */,
 				7048F6751F717A1C0014E87D /* AppDelegate.swift in Sources */,
+				7048F6A61F7AB4D60014E87D /* RestaurantTableViewController.swift in Sources */,
 				7048F67D1F717A1C0014E87D /* iSchool_Exchange.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
