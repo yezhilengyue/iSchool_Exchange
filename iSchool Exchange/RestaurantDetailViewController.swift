@@ -10,25 +10,50 @@ import UIKit
 
 class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet var tableView: UITableView!
+    
     @IBOutlet var restaurantImageView: UIImageView!
+    
     var restaurant: Restaurant!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         restaurantImageView.image = UIImage(named: restaurant.image)
-
         
+        tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue:
+            240.0/255.0, alpha: 0.2)
+        tableView.tableFooterView = UIView(frame: .zero)
+        
+        tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue:
+            240.0/255.0, alpha: 0.8)
+        
+        title = restaurant.name
+        
+        navigationController?.hidesBarsOnSwipe = false
+        
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+    
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,14 +72,20 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
             cell.fieldLabel.text = "Location"
             cell.valueLabel.text = restaurant.location
             
-        case 3:
+        case 4:
             cell.fieldLabel.text = "Been here"
             cell.valueLabel.text = restaurant.isVisited ? "Yes" : "No"
+            
+        case 3:
+            cell.fieldLabel.text = "Phone"
+            cell.valueLabel.text = restaurant.phone
             
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""
         }
+        
+        cell.backgroundColor = UIColor.clear
         
         return cell
     }
