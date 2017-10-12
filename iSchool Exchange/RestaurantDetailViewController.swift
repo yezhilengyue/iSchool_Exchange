@@ -14,6 +14,25 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
     
     @IBOutlet var restaurantImageView: UIImageView!
     
+    @IBAction func close(segue: UIStoryboardSegue){
+        
+    }
+    
+    @IBAction func ratingButtonTapped(segue:UIStoryboardSegue){
+        if let rating = segue.identifier{
+            restaurant.isVisited = true
+            
+            switch rating {
+            case "great" : restaurant.rating = "Absolutely love it! Must try."
+            case "good": restaurant.rating = "Pretty good."
+            case "dislike": restaurant.rating = "I don't like it."
+            default:break
+            }
+        }
+        
+        tableView.reloadData()
+    }
+    
     var restaurant: Restaurant!
 
     override func viewDidLoad() {
@@ -47,6 +66,7 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
     }
     
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,6 +80,10 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "t_Cell", for:indexPath) as! RestaurantDetailTableViewCell
         
         switch indexPath.row{
+//        case 0:
+//            cell.fieldLabel.text = ""
+//            cell.valueLabel.text = ""
+            
         case 0:
             cell.fieldLabel.text = "Name"
             cell.valueLabel.text = restaurant.name
@@ -72,13 +96,13 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
             cell.fieldLabel.text = "Location"
             cell.valueLabel.text = restaurant.location
             
-        case 4:
-            cell.fieldLabel.text = "Been here"
-            cell.valueLabel.text = restaurant.isVisited ? "Yes" : "No"
-            
         case 3:
             cell.fieldLabel.text = "Phone"
             cell.valueLabel.text = restaurant.phone
+            
+        case 4:
+            cell.fieldLabel.text = "Been here"
+            cell.valueLabel.text = (restaurant.isVisited) ? "Yes, I've been here before. \(restaurant.rating)" : "No"
             
         default:
             cell.fieldLabel.text = ""
@@ -90,14 +114,19 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showReview" {
+            let destination = segue.destination as! ReviewViewController
+            destination.restaurant = restaurant
+        }
+
     }
-    */
+    
 
 }
