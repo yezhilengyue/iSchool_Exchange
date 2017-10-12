@@ -157,6 +157,14 @@
                                     <outlet property="delegate" destination="ouE-MD-5zk" id="IG7-sr-pVt"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvo-na-9Iw">
+                                <rect key="frame" x="339" y="72" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="QQI-X9-xSb"/>
+                                    <constraint firstAttribute="height" constant="28" id="yyC-7y-fOU"/>
+                                </constraints>
+                                <state key="normal" image="check"/>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z2k-OZ-qy0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <constraints>
@@ -170,10 +178,12 @@
                             <constraint firstAttribute="trailing" secondItem="sJO-xf-uFi" secondAttribute="trailing" id="1wp-hT-jkv"/>
                             <constraint firstItem="www-Xp-W2K" firstAttribute="top" secondItem="sJO-xf-uFi" secondAttribute="bottom" id="3gf-fI-Rc3"/>
                             <constraint firstItem="sJO-xf-uFi" firstAttribute="top" secondItem="Z2k-OZ-qy0" secondAttribute="bottom" id="4P5-UB-1u1"/>
+                            <constraint firstItem="qvo-na-9Iw" firstAttribute="trailing" secondItem="jZO-fo-sph" secondAttribute="trailingMargin" constant="8" id="VTd-mM-Iyl"/>
                             <constraint firstItem="Z2k-OZ-qy0" firstAttribute="top" secondItem="jZO-fo-sph" secondAttribute="top" id="W0x-pX-fI7"/>
                             <constraint firstItem="Z2k-OZ-qy0" firstAttribute="leading" secondItem="jZO-fo-sph" secondAttribute="leading" id="WPG-12-5ce"/>
                             <constraint firstItem="sJO-xf-uFi" firstAttribute="leading" secondItem="jZO-fo-sph" secondAttribute="leading" id="fjq-5H-E06"/>
                             <constraint firstAttribute="trailing" secondItem="Z2k-OZ-qy0" secondAttribute="trailing" id="le2-fh-fip"/>
+                            <constraint firstItem="qvo-na-9Iw" firstAttribute="top" secondItem="Yex-7X-Al4" secondAttribute="bottom" constant="8" id="nor-V0-e4O"/>
                             <constraint firstItem="sJO-xf-uFi" firstAttribute="top" secondItem="Z2k-OZ-qy0" secondAttribute="bottom" id="vxv-ez-M6t"/>
                         </constraints>
                     </view>
@@ -185,6 +195,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zks-gx-ewE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800.8" y="135.38230884557723"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Eku-Cc-LnU">
+            <objects>
+                <viewController id="lEH-hK-Iw5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JS4-QS-YJx"/>
+                        <viewControllerLayoutGuide type="bottom" id="8x3-nN-bdc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PUs-gU-XK4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeloisl" translatesAutoresizingMaskIntoConstraints="NO" id="3Eo-Nf-uWW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-Na-6qh">
+                                <rect key="frame" x="53" y="40" width="269" height="420"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3Eo-Nf-uWW" secondAttribute="trailing" id="HJM-mv-hSc"/>
+                            <constraint firstItem="3Eo-Nf-uWW" firstAttribute="top" secondItem="PUs-gU-XK4" secondAttribute="top" id="KH5-RE-1Vm"/>
+                            <constraint firstItem="3Eo-Nf-uWW" firstAttribute="leading" secondItem="PUs-gU-XK4" secondAttribute="leading" id="MEy-yy-0BV"/>
+                            <constraint firstItem="8x3-nN-bdc" firstAttribute="top" secondItem="3Eo-Nf-uWW" secondAttribute="bottom" id="Oin-3A-mf6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWZ-Su-fAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671.1999999999998" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Y1-8U-Kh4">
@@ -205,4 +249,8 @@
             <point key="canvasLocation" x="140" y="135.38230884557723"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cafeloisl" width="480" height="480"/>
+        <image name="check" width="28" height="28"/>
+    </resources>
 </document>
