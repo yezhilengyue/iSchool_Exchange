@@ -114,12 +114,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
+                                <mapView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" id="TKg-oc-CHf">
+                                    <rect key="frame" x="0.0" y="364" width="375" height="135"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </mapView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="t_Cell" rowHeight="36" id="5x3-C4-5NM" customClass="RestaurantDetailTableViewCell" customModule="iSchool_Exchange" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="328" width="375" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5x3-C4-5NM" id="A0Q-tk-3MC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueJ-tf-5NF">
@@ -184,13 +188,42 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="TKg-oc-CHf" id="kk4-cA-7Dz"/>
                         <outlet property="restaurantImageView" destination="Z2k-OZ-qy0" id="atS-US-oug"/>
                         <outlet property="tableView" destination="sJO-xf-uFi" id="mnW-0x-LRB"/>
+                        <segue destination="7Xh-VP-wKM" kind="show" identifier="showMap" id="fAx-1b-0HR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zks-gx-ewE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800.8" y="135.38230884557723"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="dj7-aX-gxY">
+            <objects>
+                <viewController id="7Xh-VP-wKM" customClass="MapViewController" customModule="iSchool_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iYo-3j-6zc"/>
+                        <viewControllerLayoutGuide type="bottom" id="3lB-vB-NGE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MwB-VZ-fce">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xiH-0n-ahd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="xiH-0n-ahd" id="6VT-uS-xta"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTz-w2-WtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.8" y="832.53373313343332"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="Eku-Cc-LnU">

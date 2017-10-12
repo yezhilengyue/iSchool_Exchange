@@ -5,10 +5,12 @@
 //  Created by ChenYuwei on 2017/10/10.
 //  Copyright © 2017年 ChenYuwei. All rights reserved.
 //
-
+import MapKit
 import UIKit
 
 class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    @IBOutlet var mapView: MKMapView!
     
     @IBOutlet var tableView: UITableView!
     
@@ -42,7 +44,7 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue:
             240.0/255.0, alpha: 0.2)
-        tableView.tableFooterView = UIView(frame: .zero)
+        //tableView.tableFooterView = UIView(frame: .zero)
         
         tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue:
             240.0/255.0, alpha: 0.8)
@@ -53,8 +55,36 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showMap))
+        mapView.addGestureRecognizer(tapGestureRecognizer)
+        
     
-        // Do any additional setup after loading the view.
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(restaurant.location, completionHandler: {
+            placemarks, error in
+            if error != nil {
+                print(error as Any)
+                return
+            }
+            
+            if let placemarks = placemarks {
+                let placemark = placemarks[0]
+                
+                let annotaion = MKPointAnnotation()
+                
+                if let location = placemark.location{
+                    annotaion.coordinate = location.coordinate
+                    self.mapView.addAnnotation(annotaion)
+                    
+                    //Here we use the MKCoordinateRegionMakeWithDistance function to adjust the initial zoom level of the map to 250m radius
+                    let region = MKCoordinateRegionMakeWithDistance(annotaion.coordinate, 250, 250)
+                    self.mapView.setRegion(region, animated: false)
+                }
+            }
+            
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,7 +95,9 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         
     }
     
-    
+    func showMap(){ //target function
+        performSegue(withIdentifier: "showMap", sender: self)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -123,6 +155,11 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         // Pass the selected object to the new view controller.
         if segue.identifier == "showReview" {
             let destination = segue.destination as! ReviewViewController
+            destination.restaurant = restaurant
+        }
+        
+        if segue.identifier == "showMap"{
+            let destination = segue.destination as! MapViewController
             destination.restaurant = restaurant
         }
 
