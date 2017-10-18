@@ -22,6 +22,7 @@
 		70C6F1511F8FB0F600EC87D0 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6F1501F8FB0F600EC87D0 /* ReviewViewController.swift */; };
 		70C6F1541F8FC2CC00EC87D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C6F1531F8FC2CC00EC87D0 /* MapKit.framework */; };
 		70C6F1561F90064F00EC87D0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6F1551F90064F00EC87D0 /* MapViewController.swift */; };
+		70C6F15A1F9109A600EC87D0 /* AddRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6F1591F9109A600EC87D0 /* AddRestaurantController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		70C6F1501F8FB0F600EC87D0 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		70C6F1531F8FC2CC00EC87D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		70C6F1551F90064F00EC87D0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		70C6F1591F9109A600EC87D0 /* AddRestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddRestaurantController.swift; path = ../AddRestaurantController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				7048F6741F717A1C0014E87D /* AppDelegate.swift */,
 				7048F6781F717A1C0014E87D /* Main.storyboard */,
 				70C6F1551F90064F00EC87D0 /* MapViewController.swift */,
+				70C6F1591F9109A600EC87D0 /* AddRestaurantController.swift */,
 				7048F6A71F7ABA510014E87D /* RestaurantTableViewCell.swift */,
 				70C6F14E1F8DFF8C00EC87D0 /* RestaurantDetailTableViewCell.swift */,
 				7048F6A51F7AB4D60014E87D /* RestaurantTableViewController.swift */,
@@ -301,6 +304,7 @@
 				7048F6751F717A1C0014E87D /* AppDelegate.swift in Sources */,
 				70C6F14D1F8DE68700EC87D0 /* Restaurant.swift in Sources */,
 				70C6F14B1F8D53D500EC87D0 /* RestaurantDetailViewController.swift in Sources */,
+				70C6F15A1F9109A600EC87D0 /* AddRestaurantController.swift in Sources */,
 				70C6F1561F90064F00EC87D0 /* MapViewController.swift in Sources */,
 				7048F6A61F7AB4D60014E87D /* RestaurantTableViewController.swift in Sources */,
 				7048F67D1F717A1C0014E87D /* iSchool_Exchange.xcdatamodeld in Sources */,

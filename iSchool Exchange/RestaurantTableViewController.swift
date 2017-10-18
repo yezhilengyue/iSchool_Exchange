@@ -10,6 +10,10 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
     
+    @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue){
+        
+    }
+    
     override var prefersStatusBarHidden: Bool{
         return true;
     }
@@ -164,6 +168,7 @@ class RestaurantTableViewController: UITableViewController {
     }
     
 
+    
     
     // MARK: - Navigation
 
