@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class AddRestaurantController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class AddRestaurantController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var nameTextField:UITextField!
@@ -18,6 +19,7 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
     @IBOutlet var noButton:UIButton!
     
     //var restaurant: Restaurant?
+    var restaurant: RestaurantMO!
     var isVisited = true
     
     @IBAction func toggleBeenHereButton(sender: UIButton){
@@ -40,6 +42,27 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
             present(alert, animated: true, completion: nil)
             return
         }
+        
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            //Get the context info of data model
+            //To access the variable, we have to first get a reference to AppDelegate 
+            restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+            
+            restaurant.name = nameTextField.text
+            restaurant.type = typeTextField.text
+            restaurant.location = locationTextField.text
+            restaurant.isVisited = isVisited
+            
+            if let restaurantImage = photoImageView.image{
+                if let imageData = UIImagePNGRepresentation(restaurantImage) {
+                    restaurant.image = NSData(data: imageData)
+                }
+            }
+            
+            print("Saving data to context...")
+            appDelegate.saveContext()
+        }
+        
        
         dismiss(animated: true, completion: nil)
     }

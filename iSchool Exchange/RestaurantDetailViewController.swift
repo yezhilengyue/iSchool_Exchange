@@ -35,12 +35,12 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         tableView.reloadData()
     }
     
-    var restaurant: Restaurant!
+    var restaurant: RestaurantMO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantImageView.image = UIImage(data: restaurant.image! as Data)
         
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue:
             240.0/255.0, alpha: 0.2)
@@ -62,7 +62,7 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         
     
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(restaurant.location, completionHandler: {
+        geoCoder.geocodeAddressString(restaurant.location!, completionHandler: {
             placemarks, error in
             if error != nil {
                 print(error as Any)
@@ -134,7 +134,7 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
             
         case 4:
             cell.fieldLabel.text = "Been here"
-            cell.valueLabel.text = (restaurant.isVisited) ? "Yes, I've been here before. \(restaurant.rating)" : "No"
+            cell.valueLabel.text = (restaurant.isVisited) ? "Yes, I've been here before. \(String(describing: restaurant.rating))" : "No"
             
         default:
             cell.fieldLabel.text = ""
