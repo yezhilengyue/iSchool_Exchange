@@ -550,6 +550,68 @@
             </objects>
             <point key="canvasLocation" x="140" y="135.38230884557723"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="hDr-0y-km6">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jBN-1j-2U9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2SJ-Xw-TIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="952"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="D4t-bC-vDK">
+            <objects>
+                <viewController id="xXr-St-3QV" customClass="WalkthroughContentViewController" customModule="iSchool_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pgr-iW-4dM"/>
+                        <viewControllerLayoutGuide type="bottom" id="sEX-j2-TSp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T1F-EG-IYm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7P-Vd-agj">
+                                <rect key="frame" x="129" y="28" width="117" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xsl-Gr-s4g">
+                                <rect key="frame" x="37" y="69" width="300" height="232"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5d-OB-UVb">
+                                <rect key="frame" x="46" y="302" width="282" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9OJ-mL-71I"/>
+                                    <constraint firstAttribute="width" constant="282" id="GlU-VY-UPW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8862745098" green="0.1137254902" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X5d-OB-UVb" firstAttribute="centerX" secondItem="Xsl-Gr-s4g" secondAttribute="centerX" id="2xG-o0-hlb"/>
+                            <constraint firstItem="f7P-Vd-agj" firstAttribute="top" secondItem="pgr-iW-4dM" secondAttribute="bottom" constant="8" id="3lK-OF-TU2"/>
+                            <constraint firstItem="X5d-OB-UVb" firstAttribute="centerY" secondItem="T1F-EG-IYm" secondAttribute="centerY" id="AKd-Fd-NxE"/>
+                            <constraint firstItem="Xsl-Gr-s4g" firstAttribute="leading" secondItem="T1F-EG-IYm" secondAttribute="leadingMargin" constant="21" id="Pyx-Zf-qO6"/>
+                            <constraint firstItem="X5d-OB-UVb" firstAttribute="centerX" secondItem="f7P-Vd-agj" secondAttribute="centerX" id="Vex-P1-iLB"/>
+                            <constraint firstItem="X5d-OB-UVb" firstAttribute="top" secondItem="Xsl-Gr-s4g" secondAttribute="bottom" constant="1" id="X09-ec-C3n"/>
+                            <constraint firstItem="f7P-Vd-agj" firstAttribute="centerX" secondItem="T1F-EG-IYm" secondAttribute="centerX" id="YsG-Nc-WZ9"/>
+                            <constraint firstItem="Xsl-Gr-s4g" firstAttribute="top" secondItem="f7P-Vd-agj" secondAttribute="bottom" constant="13" id="t2K-2O-1O7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="Xsl-Gr-s4g" id="HSV-PI-rqk"/>
+                        <outlet property="contentLabel" destination="X5d-OB-UVb" id="xrl-tu-EPg"/>
+                        <outlet property="headingLabel" destination="f7P-Vd-agj" id="mnN-lf-W9I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuT-VZ-oSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="959.37031484257875"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sid-hH-BQX">
             <objects>
