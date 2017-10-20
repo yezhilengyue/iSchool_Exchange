@@ -550,10 +550,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="135.38230884557723"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="hDr-0y-km6">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jBN-1j-2U9" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jBN-1j-2U9" customClass="WalkthroughPageViewController" customModule="iSchool_Exchange" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2SJ-Xw-TIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="952"/>
@@ -561,7 +561,7 @@
         <!--Walkthrough Content View Controller-->
         <scene sceneID="D4t-bC-vDK">
             <objects>
-                <viewController id="xXr-St-3QV" customClass="WalkthroughContentViewController" customModule="iSchool_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="xXr-St-3QV" customClass="WalkthroughContentViewController" customModule="iSchool_Exchange" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pgr-iW-4dM"/>
                         <viewControllerLayoutGuide type="bottom" id="sEX-j2-TSp"/>
@@ -589,23 +589,42 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ptu-Qd-DMR">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWx-nq-ecl">
+                                <rect key="frame" x="315" y="627" width="44" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTappedWithSender:" destination="xXr-St-3QV" eventType="touchUpInside" id="tHd-QG-xzW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8862745098" green="0.1137254902" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="X5d-OB-UVb" firstAttribute="centerX" secondItem="Xsl-Gr-s4g" secondAttribute="centerX" id="2xG-o0-hlb"/>
                             <constraint firstItem="f7P-Vd-agj" firstAttribute="top" secondItem="pgr-iW-4dM" secondAttribute="bottom" constant="8" id="3lK-OF-TU2"/>
+                            <constraint firstItem="ptu-Qd-DMR" firstAttribute="centerX" secondItem="T1F-EG-IYm" secondAttribute="centerX" id="90i-qG-GGz"/>
                             <constraint firstItem="X5d-OB-UVb" firstAttribute="centerY" secondItem="T1F-EG-IYm" secondAttribute="centerY" id="AKd-Fd-NxE"/>
                             <constraint firstItem="Xsl-Gr-s4g" firstAttribute="leading" secondItem="T1F-EG-IYm" secondAttribute="leadingMargin" constant="21" id="Pyx-Zf-qO6"/>
+                            <constraint firstItem="sEX-j2-TSp" firstAttribute="top" secondItem="ptu-Qd-DMR" secondAttribute="bottom" constant="20" id="QX8-tG-l9T"/>
                             <constraint firstItem="X5d-OB-UVb" firstAttribute="centerX" secondItem="f7P-Vd-agj" secondAttribute="centerX" id="Vex-P1-iLB"/>
                             <constraint firstItem="X5d-OB-UVb" firstAttribute="top" secondItem="Xsl-Gr-s4g" secondAttribute="bottom" constant="1" id="X09-ec-C3n"/>
                             <constraint firstItem="f7P-Vd-agj" firstAttribute="centerX" secondItem="T1F-EG-IYm" secondAttribute="centerX" id="YsG-Nc-WZ9"/>
+                            <constraint firstItem="sEX-j2-TSp" firstAttribute="top" secondItem="LWx-nq-ecl" secondAttribute="bottom" constant="7" id="jgE-rs-C6g"/>
                             <constraint firstItem="Xsl-Gr-s4g" firstAttribute="top" secondItem="f7P-Vd-agj" secondAttribute="bottom" constant="13" id="t2K-2O-1O7"/>
+                            <constraint firstItem="LWx-nq-ecl" firstAttribute="trailing" secondItem="T1F-EG-IYm" secondAttribute="trailingMargin" id="tlj-QM-zuC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentImageView" destination="Xsl-Gr-s4g" id="HSV-PI-rqk"/>
                         <outlet property="contentLabel" destination="X5d-OB-UVb" id="xrl-tu-EPg"/>
+                        <outlet property="forwardButton" destination="LWx-nq-ecl" id="np5-84-l2U"/>
                         <outlet property="headingLabel" destination="f7P-Vd-agj" id="mnN-lf-W9I"/>
+                        <outlet property="pageControl" destination="ptu-Qd-DMR" id="Wci-FN-O4b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuT-VZ-oSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
