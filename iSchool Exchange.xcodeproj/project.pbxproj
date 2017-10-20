@@ -124,6 +124,7 @@
 				7048F6741F717A1C0014E87D /* AppDelegate.swift */,
 				7048F6781F717A1C0014E87D /* Main.storyboard */,
 				708FFC511F9A7AEB00B42BCE /* WalkthroughPageViewController.swift */,
+				708FFC4F1F9A493500B42BCE /* WalkthroughContentViewController.swift */,
 				70C6F15E1F9881D700EC87D0 /* iSchool Exchange.xcdatamodeld */,
 				70C6F1551F90064F00EC87D0 /* MapViewController.swift */,
 				70C6F1591F9109A600EC87D0 /* AddRestaurantController.swift */,
@@ -134,7 +135,6 @@
 				70C6F14A1F8D53D500EC87D0 /* RestaurantDetailViewController.swift */,
 				70C6F1501F8FB0F600EC87D0 /* ReviewViewController.swift */,
 				7048F67E1F717A1C0014E87D /* Assets.xcassets */,
-				708FFC4F1F9A493500B42BCE /* WalkthroughContentViewController.swift */,
 				7048F6801F717A1C0014E87D /* LaunchScreen.storyboard */,
 				7048F6831F717A1C0014E87D /* Info.plist */,
 			);
