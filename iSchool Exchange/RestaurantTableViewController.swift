@@ -132,9 +132,17 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         shareAction.backgroundColor = UIColor(red: 160/255, green: 133/255, blue: 204/255, alpha: 1)
         
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: {(action, indexPath) -> Void in
-            self.restaurants.remove(at: indexPath.row)
+
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                let context = appDelegate.persistentContainer.viewContext
+                let restaurantToDelete = self.fetchResultController.object(at: indexPath)
+                context.delete(restaurantToDelete)
+                
+                appDelegate.saveContext()
+            }
             
-            self.tableView.deleteRows(at: [indexPath], with: .fade)
+//            self.restaurants.remove(at: indexPath.row)            
+//            self.tableView.deleteRows(at: [indexPath], with: .fade)
         })
         
         deleteAction.backgroundColor = UIColor(red: 202/255, green: 202/255, blue: 203/255, alpha: 1)
