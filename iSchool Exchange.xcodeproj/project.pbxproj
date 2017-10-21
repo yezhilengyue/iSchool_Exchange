@@ -17,6 +17,8 @@
 		7048F6A81F7ABA510014E87D /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048F6A71F7ABA510014E87D /* RestaurantTableViewCell.swift */; };
 		708FFC501F9A493500B42BCE /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FFC4F1F9A493500B42BCE /* WalkthroughContentViewController.swift */; };
 		708FFC521F9A7AEB00B42BCE /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708FFC511F9A7AEB00B42BCE /* WalkthroughPageViewController.swift */; };
+		708FFC551F9BE4B800B42BCE /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708FFC531F9BE4B800B42BCE /* about.storyboard */; };
+		708FFC5E1F9BF70A00B42BCE /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708FFC5D1F9BF70A00B42BCE /* discover.storyboard */; };
 		70C6F14B1F8D53D500EC87D0 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6F14A1F8D53D500EC87D0 /* RestaurantDetailViewController.swift */; };
 		70C6F14D1F8DE68700EC87D0 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6F14C1F8DE68700EC87D0 /* Restaurant.swift */; };
 		70C6F14F1F8DFF8C00EC87D0 /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6F14E1F8DFF8C00EC87D0 /* RestaurantDetailTableViewCell.swift */; };
@@ -61,6 +63,8 @@
 		7048F6A71F7ABA510014E87D /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		708FFC4F1F9A493500B42BCE /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		708FFC511F9A7AEB00B42BCE /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		708FFC541F9BE4B800B42BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/about.storyboard; sourceTree = "<group>"; };
+		708FFC5D1F9BF70A00B42BCE /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
 		70C6F14A1F8D53D500EC87D0 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		70C6F14C1F8DE68700EC87D0 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		70C6F14E1F8DFF8C00EC87D0 /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 			children = (
 				7048F6741F717A1C0014E87D /* AppDelegate.swift */,
 				7048F6781F717A1C0014E87D /* Main.storyboard */,
+				708FFC5D1F9BF70A00B42BCE /* discover.storyboard */,
+				708FFC531F9BE4B800B42BCE /* about.storyboard */,
 				708FFC511F9A7AEB00B42BCE /* WalkthroughPageViewController.swift */,
 				708FFC4F1F9A493500B42BCE /* WalkthroughContentViewController.swift */,
 				70C6F15E1F9881D700EC87D0 /* iSchool Exchange.xcdatamodeld */,
@@ -281,6 +287,8 @@
 			files = (
 				7048F6821F717A1C0014E87D /* LaunchScreen.storyboard in Resources */,
 				7048F67F1F717A1C0014E87D /* Assets.xcassets in Resources */,
+				708FFC5E1F9BF70A00B42BCE /* discover.storyboard in Resources */,
+				708FFC551F9BE4B800B42BCE /* about.storyboard in Resources */,
 				7048F67A1F717A1C0014E87D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +375,14 @@
 				7048F6811F717A1C0014E87D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		708FFC531F9BE4B800B42BCE /* about.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				708FFC541F9BE4B800B42BCE /* Base */,
+			);
+			name = about.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

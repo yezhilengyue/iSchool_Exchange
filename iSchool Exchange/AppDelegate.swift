@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 216.0/255.0, green:
-            74.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 236.0/255.0, green:
+            240.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.white
         
         if let barFont = UIFont(name: "Avenir-Light", size: 24.0){
@@ -27,6 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        
+        UITabBar.appearance().tintColor = UIColor(red: 235.0/255.0, green: 75.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+        UITabBar.appearance().barTintColor = UIColor.black
+        UITabBar.appearance().backgroundImage = UIImage(named: "tabbar-background")
+        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "tabitem-selected")
         
         return true
     }
