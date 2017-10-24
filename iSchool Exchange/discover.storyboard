@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Thr-WE-o2C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,9 +42,8 @@
         <scene sceneID="PB0-gb-GPd">
             <objects>
                 <navigationController id="Thr-WE-o2C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discover" selectedImage="tabBarItem:FhP-v0-ohz:selectedImage" id="FhP-v0-ohz"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="discover" selectedImage="tabBarItem:FhP-v0-ohz:selectedImage" id="FhP-v0-ohz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x4Q-j1-Tay">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,6 +58,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="discover" width="25" height="19"/>
         <image name="tabBarItem:FhP-v0-ohz:selectedImage" width="25" height="19">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
